@@ -1,6 +1,7 @@
 <!doctype html>
 <body>
 <h1>three file Test shadow DOM closed</h1>
+
 <script>
 customElements.define('show-hello', class extends HTMLElement {
   connectedCallback() {
@@ -11,7 +12,9 @@ customElements.define('show-hello', class extends HTMLElement {
   }
 });
 </script>
-
+ <div>
+  <h2>тут элемент h2</h2>  
 <show-hello name="John"></show-hello>
-</body>
+</div>
 
+</body>

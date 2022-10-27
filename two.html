@@ -1,47 +1,16 @@
-  
-  
-<!DOCTYPE html>
-
-<html>
-<head>
-<meta charset = 'utf-8'>
-<title>Страница 2</title>
-</head>
-
+<!doctype html>
 <body>
-  <p>
-<a href='https://utkin7890.github.io/page_new_win/three.html'>
-  <font size="20">-----3</font>
-    </a>
+<h1>two file Test shadow DOM open</h1>
+<script>
+customElements.define('show-hello', class extends HTMLElement {
+  connectedCallback() {
+    const shadow = this.attachShadow({mode: 'open'});
+    shadow.innerHTML = `<p>
+      Hello, ${this.getAttribute('name')}
+    </p>`;
+  }
+});
+</script>
 
-    </p>
-  
-  
-  
-    <br/>
-  <br/>
-  <br/>
-  <p>
-<a href='https://utkin7890.github.io/page_new_win/zero.html'>
-  <font size="20">-----0</font>
-    </a>
-
-    </p>
-  
-    <br/>
-  <br/>
-  <p>
-<a href='https://utkin7890.github.io/page_new_win/index.html'>
-  <font size="20">--главная</font>
-    </a>
-
-    </p>
-  
-  
-  
-  
-  
+<show-hello name="John"></show-hello>
 </body>
-
-
-</html>

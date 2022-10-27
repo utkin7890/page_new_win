@@ -1,9 +1,10 @@
 <!doctype html>
 <body>
+<h1>three file Test shadow DOM closed</h1>
 <script>
 customElements.define('show-hello', class extends HTMLElement {
   connectedCallback() {
-    const shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({mode: 'closed'});
     shadow.innerHTML = `<p>
       Hello, ${this.getAttribute('name')}
     </p>`;
@@ -13,3 +14,4 @@ customElements.define('show-hello', class extends HTMLElement {
 
 <show-hello name="John"></show-hello>
 </body>
+
